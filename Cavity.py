@@ -121,7 +121,7 @@ class Cavity():
                                     self.cnt * self.Ts)) * \
                      (1.0 + self.noise[self.cnt % 2048])
         
-        # get the reflection phasor
+        # get the reflection 
         vr_if = vc_if - vf_if
         
         # update the variable for next step
