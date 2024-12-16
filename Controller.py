@@ -9,6 +9,7 @@ Created by Zheqiao Geng on 2024.12.14
 import numpy as np
 from Controller_PI import * 
 from Controller_Notch import * 
+from Controller_Notch_SS import * 
 
 # =================================================
 # define the class

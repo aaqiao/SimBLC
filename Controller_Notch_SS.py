@@ -1,20 +1,24 @@
 """
-Notch controller
+Notch controller state-space implementation
+The "Python Control Systems Library" is used, which can be installed with
+    pip install control
 
-Created by Zheqiao Geng on 2024.12.14
+Created by Zheqiao Geng on 2024.12.16
 """
 import numpy as np
+from scipy import signal
+
+from llrflibs.rf_control import *
 
 # =================================================
 # define the class
 # =================================================
-class Controller_Notch():
+class Controller_Notch_SS():
     # -------------------------------------------
     # construction
     # -------------------------------------------
     def __init__(self):
         # init variables
-        self.vo_last     = 0.0              # temp var for solving diff equ                
         self.initialized = False            # indicate if initialized or not
 
     # -------------------------------------------
@@ -39,6 +43,17 @@ class Controller_Notch():
         # derived parameters
         self.Ts   = 1.0 / fs
         
+        # construct the state-space controller
+        Ac, Bc, Cc, Dc = signal.tf2ss([self.gain * self.wh], 
+                                      [1.0, self.wh - 1j * self.wn])
+        _, self.A, self.B, self.C, self.D, _ = ss_discrete(Ac, Bc, Cc, Dc, 
+                                                           self.Ts, 
+                                                           method = 'bilinear',
+                                                           plot = False,
+                                                           plot_pno = 100000)
+        
+        self.state_k = None         # state of the controller  
+        
         # declare initialized
         self.initialized = True
 
@@ -46,7 +61,12 @@ class Controller_Notch():
     # reset
     # -------------------------------------------
     def reset(self):
-        self.vo_last = 0.0        
+        # check if initialized
+        if not self.initialized:
+            return
+        
+        # clear the buffer and vars
+        self.state_k = None
 
     # -------------------------------------------
     # simulate a step
@@ -57,12 +77,17 @@ class Controller_Notch():
         if not self.initialized:
             return 0.0
 
-        # simulate a step        
-        vo = (1.0 - self.Ts * (self.wh - 1j*self.wn)) * self.vo_last + \
-             self.gain * self.wh * self.Ts * vi        
-        
-        # update the variable for next step
-        self.vo_last = vo        
+        # feedback for a step
+        # - init the state of the controller
+        if ((self.state_k is None) and (self.B is not None)):
+            self.state_k = np.matrix(np.zeros(self.B.shape), dtype = complex)
+            
+        # - execute one step feedback
+        vo = 0.0
+        if self.state_k is not None:        
+            _, vo, _, self.state_k = control_step(self.A, self.B, self.C, self.D,
+                                                  vi, self.state_k)
+            vo = vo[0, 0]
                     
         # return the result
         return vo
