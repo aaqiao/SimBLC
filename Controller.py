@@ -10,6 +10,7 @@ import numpy as np
 from Controller_PI import * 
 from Controller_Notch import * 
 from Controller_Notch_SS import * 
+from NCO import *
 
 # =================================================
 # define the class
@@ -58,13 +59,13 @@ class Controller():
         self.buf_demod = np.zeros(ndemod, dtype = 'complex')
         self.Ts = 1.0 / fs                  # sampling time, s
 
-        # construct the controller
-        self.control = []
+        # construct the feedback controller
+        self.control_fb = []
         
         # - define PI controller
         pictrl = Controller_PI()
         pictrl.set_param(Kp = Kp, Ki = Ki)
-        self.control.append(pictrl)
+        self.control_fb.append(pictrl)
         
         # - define notch controller
         if notches is not None:
@@ -80,8 +81,12 @@ class Controller():
                                 fh   = nt_fh[i], 
                                 fn   = nt_fn[i], 
                                 gain = nt_g[i])
-                self.control.append(nctrl)
-            
+                self.control_fb.append(nctrl)
+        
+        # construct the feedforward controller
+        self.nco = NCO()
+        self.nco.set_param(fs, 6*fb)
+        
         # declare initialized
         self.initialized = True
 
@@ -118,17 +123,25 @@ class Controller():
         vc_err = vc_sp - vc
         
         # feedback for a step
-        vf = 0.0
-        for ctl in self.control:
-            vf += ctl.sim_step(vc_err)
+        vfb = 0.0
+        for ctl in self.control_fb:
+            vfb += ctl.sim_step(vc_err)
 
-        # if feedback not enable
         if not fb_enable:
-            vf = 0.0
+            vfb = 0.0
+        
+        # feedforward for a step
+        vff = 0.0       
+        vp, vn = self.nco.sim_step()
+        
+        A = 20000
+        P = 90 * np.pi / 180
+        vff = vp * A * np.exp(1j * P)
+        vff +=vn * A * np.exp(1j * P)
         
         # get the IF signal of the actuation signal
-        vf_if = np.real(vf * np.exp(1j * 2.0 * np.pi * self.fif * \
-                                    self.cnt * self.Ts))
+        vf_if = np.real((vfb + vff) * np.exp(1j * 2.0 * np.pi * self.fif * \
+                                             self.cnt * self.Ts))
             
         # update the variable for next step
         self.cnt += 1
