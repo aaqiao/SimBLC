@@ -1,34 +1,44 @@
 """
-Simulate an NCO
+feedforward controller
 
-Created by Zheqiao Geng on 2024.12.16
+Created by Zheqiao Geng on 2024.12.17
 """
 import numpy as np
+
+from NCO import *
 
 # =================================================
 # define the class
 # =================================================
-class NCO():
+class Controller_FF():
     # -------------------------------------------
     # construction
     # -------------------------------------------
     def __init__(self):
         # init variables
-        self.phase       = 0.0              # instant phase, rad
-        self.initialized = False            # indicate if initialized or not
+        self.initialized = False    # indicate if initialized or not
 
+        # contains an NCO
+        self.nco = NCO()
+    
     # -------------------------------------------
     # set parameters
+    # Input: fs   - sampling frequency, Hz
+    #        fnco - NCO frequency, Hz
+    #        A    - ampltiude calibration
+    #        P    - phase calibration, deg
     # -------------------------------------------
-    def set_param(self, fs = 1.0e6, fnco = 1.0e3):
+    def set_param(self, fs = 10.0e6, fnco = 0.0, A = 1.0, P = 0.0):
         # check the input (to be done ...)
         
         # store the results
         self.fs   = fs
         self.fnco = fnco
+        self.A    = A
+        self.P    = P * np.pi / 180.0
 
-        # derived parameters
-        self.dpha = fnco / fs * 2.0 * np.pi
+        # init the NCO
+        self.nco.set_param(fs = fs, fnco = fnco)
 
         # declare initialized
         self.initialized = True
@@ -37,21 +47,18 @@ class NCO():
     # reset
     # -------------------------------------------
     def reset(self):
-        self.phase = 0.0
+        self.nco.reset()
 
     # -------------------------------------------
-    # simulate a step
+    # simulate a step    
     # -------------------------------------------
     def sim_step(self):
         # check if initialized
         if not self.initialized:
             return 0.0
 
-        # update the phase
-        self.phase += self.dpha
-
-        # generate output (2 for both sideband)
-        return 2.0 * np.cos(self.phase)
+        # calculate the output
+        return self.nco.sim_step() * self.A * np.exp(1j * self.P)
 
 
 

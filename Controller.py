@@ -10,7 +10,7 @@ import numpy as np
 from Controller_PI import * 
 from Controller_Notch import * 
 from Controller_Notch_SS import * 
-from NCO import *
+from Controller_FF import *
 
 # =================================================
 # define the class
@@ -34,6 +34,7 @@ class Controller():
     #        Kp      - proportional feedback gain
     #        Ki      - integral feedback gain
     #        notches - data structure for notch controller
+    #        ffncos  - data structure for NCO based feedforward
     # -------------------------------------------        
     def set_param(self, fb      = 1.0e6,
                         fs      = 10.0e6,
@@ -42,7 +43,8 @@ class Controller():
                         lp_pha  = 10,
                         Kp      = 10.0,
                         Ki      = 0.0,
-                        notches = None):
+                        notches = None,
+                        ffncos  = None):
         # check the input (to be done ...)
         
         # store the results
@@ -54,6 +56,7 @@ class Controller():
         self.Kp      = Kp
         self.Ki      = Ki
         self.notches = notches
+        self.ffncos  = ffncos
 
         # derived variables
         self.buf_demod = np.zeros(ndemod, dtype = 'complex')
@@ -84,8 +87,21 @@ class Controller():
                 self.control_fb.append(nctrl)
         
         # construct the feedforward controller
-        self.nco = NCO()
-        self.nco.set_param(fs, 6*fb)
+        self.control_ff = []
+        if ffncos is not None:
+            # get the nco parameters
+            nco_f = ffncos['freq_offs']     # NCO frequency offset to carrier, Hz
+            nco_A = ffncos['amp_cal']       # NCO calibration amplitude
+            nco_P = ffncos['pha_cal']       # NCO calibration phase, deg
+        
+            # construct the FF controller
+            for i in range(len(nco_f)):
+                ffctrl = Controller_FF()
+                ffctrl.set_param(fs   = fs,
+                                 fnco = nco_f[i],
+                                 A    = nco_A[i],
+                                 P    = nco_P[i])
+                self.control_ff.append(ffctrl)
         
         # declare initialized
         self.initialized = True
@@ -102,18 +118,24 @@ class Controller():
         self.buf_demod[:] = 0.0
         self.cnt = 0
         
-        # reset notch controllers
-        for ctl in self.notch_ctrl:
+        # reset feedback controllers
+        for ctl in self.control_fb:
             ctl.reset()
-
+            
+        # reset feedforward controllers
+        for ctl in self.control_ff:
+            ctl.reset()
+            
     # -------------------------------------------
     # simulate a step
     # Input: vc_if      - IF signal of the cavity voltage, V
     #        vc_sp      - setpoint phasor of cavity voltage, V
     #        fb_enable  - True for enabling feedback
+    #        ff_enable  - True for enabling feedforward
     # -------------------------------------------
     def sim_step(self, vc_if, vc_sp, 
-                       fb_enable = False):
+                       fb_enable = False,
+                       ff_enable = False):
         # check if initialized
         if not self.initialized:
             return 0.0
@@ -130,14 +152,13 @@ class Controller():
         if not fb_enable:
             vfb = 0.0
         
-        # feedforward for a step
-        vff = 0.0       
-        vp, vn = self.nco.sim_step()
+        # feedforward for a step        
+        vff = 0.0
+        for ctl in self.control_ff:
+            vff += ctl.sim_step()
         
-        A = 20000
-        P = 90 * np.pi / 180
-        vff = vp * A * np.exp(1j * P)
-        vff +=vn * A * np.exp(1j * P)
+        if not ff_enable:
+            vff = 0.0
         
         # get the IF signal of the actuation signal
         vf_if = np.real((vfb + vff) * np.exp(1j * 2.0 * np.pi * self.fif * \
