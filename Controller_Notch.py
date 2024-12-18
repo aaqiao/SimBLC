@@ -1,8 +1,10 @@
-"""
-Notch controller
-
-Created by Zheqiao Geng on 2024.12.14
-"""
+#####################################################################
+#  Copyright (c) 2024 by Zheqiao Geng
+#  All rights reserved.
+#####################################################################
+#################################################################
+# Notch feedback controller
+#################################################################
 import numpy as np
 
 # =================================================
@@ -14,8 +16,8 @@ class Controller_Notch():
     # -------------------------------------------
     def __init__(self):
         # init variables
-        self.vo_last     = 0.0              # temp var for solving diff equ                
-        self.initialized = False            # indicate if initialized or not
+        self.vo_last     = 0.0      # temp var for solving diff equ                
+        self.initialized = False    # indicate if initialized or not
 
     # -------------------------------------------
     # set parameters

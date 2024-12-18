@@ -175,7 +175,7 @@ class Job_SimBLC(Job):
             self.ctl.set_param(fb      = self.fb,
                                fs      = self.fs,
                                fif     = self.fif,
-                               ndemod  = int(ndemod),            # 240 = delay of 1 us
+                               ndemod  = int(ndemod),       # 240 = delay of 1 us
                                lp_pha  = lp_pha,
                                Kp      = Kp,
                                Ki      = Ki,

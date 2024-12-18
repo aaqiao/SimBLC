@@ -1,4 +1,4 @@
-# Python script to setup the parameters
+# Python script to display the waveforms
 import time
 import numpy as np
 import matplotlib.pyplot as plt

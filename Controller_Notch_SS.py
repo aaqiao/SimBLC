@@ -1,10 +1,10 @@
-"""
-Notch controller state-space implementation
-The "Python Control Systems Library" is used, which can be installed with
-    pip install control
-
-Created by Zheqiao Geng on 2024.12.16
-"""
+#####################################################################
+#  Copyright (c) 2024 by Zheqiao Geng
+#  All rights reserved.
+#####################################################################
+#################################################################
+# Notch feedback controller in state-space format
+#################################################################
 import numpy as np
 from scipy import signal
 
@@ -19,7 +19,7 @@ class Controller_Notch_SS():
     # -------------------------------------------
     def __init__(self):
         # init variables
-        self.initialized = False            # indicate if initialized or not
+        self.initialized = False    # indicate if initialized or not
 
     # -------------------------------------------
     # set parameters

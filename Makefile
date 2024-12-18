@@ -10,6 +10,7 @@ help ::
 	@echo "======================================================"
 	@echo "available targets:"
 	@echo " -> make clean       clean the Python compilation"
+	@echo " -> make install     install the soft IOC"
 	@echo "======================================================"
 
 # remove all compiled data

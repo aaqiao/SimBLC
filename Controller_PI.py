@@ -1,8 +1,10 @@
-"""
-PI controller
-
-Created by Zheqiao Geng on 2024.12.15
-"""
+#####################################################################
+#  Copyright (c) 2024 by Zheqiao Geng
+#  All rights reserved.
+#####################################################################
+#################################################################
+# PI feedback controller
+#################################################################
 import numpy as np
 
 # =================================================
@@ -14,8 +16,8 @@ class Controller_PI():
     # -------------------------------------------
     def __init__(self):
         # init variables
-        self.integrator  = 0.0              # integrator for I control
-        self.initialized = False            # indicate if initialized or not
+        self.integrator  = 0.0      # integrator for I control
+        self.initialized = False    # indicate if initialized or not
 
     # -------------------------------------------
     # set parameters

@@ -268,7 +268,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -311,7 +311,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -354,7 +354,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -397,7 +397,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -440,7 +440,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -483,7 +483,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -526,7 +526,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -569,7 +569,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -612,7 +612,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -655,7 +655,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -698,7 +698,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -741,7 +741,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -784,7 +784,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -827,7 +827,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -870,7 +870,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -913,7 +913,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -956,7 +956,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -999,7 +999,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1042,7 +1042,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1085,7 +1085,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1150,7 +1150,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1193,7 +1193,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1236,7 +1236,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1279,7 +1279,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1322,7 +1322,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1365,7 +1365,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1408,7 +1408,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1473,7 +1473,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1516,7 +1516,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1559,7 +1559,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1602,7 +1602,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1645,7 +1645,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1688,7 +1688,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1731,7 +1731,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1774,7 +1774,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1839,7 +1839,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1882,7 +1882,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1925,7 +1925,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -1968,7 +1968,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>
@@ -2011,7 +2011,7 @@
      <enum>caLineEdit::Static</enum>
     </property>
     <property name="precision">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="precisionMode">
      <enum>caLineEdit::User</enum>

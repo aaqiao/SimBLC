@@ -1,11 +1,10 @@
-"""
-Cavity model for beam loading study
- * The cavity receives IF input and generate IF output
- * Beam loading is added for each bunch
- * Noise is added in the output to emulate meas noise
-
-Created by Zheqiao Geng on 2024.12.14
-"""
+#####################################################################
+#  Copyright (c) 2024 by Zheqiao Geng
+#  All rights reserved.
+#####################################################################
+#################################################################
+# Cavity model for beam loading study
+#################################################################
 import numpy as np
 from scipy import signal
 
@@ -21,7 +20,7 @@ class Cavity():
     def __init__(self):
         # init variables
         self.vc_last     = 0.0              # temp var for solving cavity equ, V
-        self.cnt         = 0                # counter of sim steps (with arbitrary init time)
+        self.cnt         = 131              # counter of sim steps (with arbitrary init time)
         self.noise       = np.zeros(2048)   # noise series
         self.initialized = False            # indicate if initialized or not
 
@@ -84,7 +83,7 @@ class Cavity():
     # -------------------------------------------
     def reset(self):
         self.vc_last = 0.0
-        self.cnt     = 0
+        self.cnt     = 131
 
     # -------------------------------------------
     # simulate a step

@@ -1,11 +1,11 @@
-"""
-Controller for beam loading compensation/control
- * PI feedback control
- * notch feedback controls
- * feedforward control
- 
-Created by Zheqiao Geng on 2024.12.14
-"""
+#####################################################################
+#  Copyright (c) 2024 by Zheqiao Geng
+#  All rights reserved.
+#####################################################################
+#################################################################
+# Assembly of the cavity controller
+#################################################################
+import gc
 import numpy as np
 from Controller_PI import * 
 from Controller_Notch import * 
@@ -17,12 +17,31 @@ from Controller_FF import *
 # =================================================
 class Controller():
     # -------------------------------------------
+    # class variables
+    # -------------------------------------------
+    MAX_NCH = 10        # max notch filter (beam harmonics)
+    MAX_NCO = 10        # max NCO (beam harmonics)
+
+    # -------------------------------------------
     # construction
     # -------------------------------------------
     def __init__(self):
         # init variables
         self.cnt = 0                    # counter of sim steps
+        self.buf_demod = None           # demodulation buffer
         self.initialized = False        # indicate if initialized or not
+
+        # create the object of controllers
+        self.control_fb = [Controller_PI(),]                # PI
+        for i in range(Controller.MAX_NCH * 2):
+            self.control_fb.append(Controller_Notch())      # Notch
+
+        self.control_ff = []
+        for i in range(Controller.MAX_NCO):
+            self.control_ff.append(Controller_FF())         # NCO FF
+        
+        self.num_fb = 0                 # actual number of feedback controller
+        self.num_ff = 0                 # actual number of feedforward controller
 
     # -------------------------------------------
     # set parameters
@@ -59,49 +78,47 @@ class Controller():
         self.ffncos  = ffncos
 
         # derived variables
+        if self.buf_demod is not None:
+            del self.buf_demod
+            gc.collect()
+
         self.buf_demod = np.zeros(ndemod, dtype = 'complex')
         self.Ts = 1.0 / fs                  # sampling time, s
 
-        # construct the feedback controller
-        self.control_fb = []
-        
-        # - define PI controller
-        pictrl = Controller_PI()
-        pictrl.set_param(Kp = Kp, Ki = Ki)
-        self.control_fb.append(pictrl)
-        
-        # - define notch controller
+        # set the feedback controller
+        self.control_fb[0].set_param(Kp = Kp, Ki = Ki)
+        self.num_fb = 1
         if notches is not None:
             # get the notch parameters
             nt_fn = notches['freq_offs']     # notch frequency offset to carrier, Hz
             nt_fh = notches['half_bw']       # half BW of notch filter, Hz
             nt_g  = notches['gain']          # gain
-            
+            self.num_fb += len(nt_fn)            
+
             # construct the notch controller
             for i in range(len(nt_fn)):
-                nctrl = Controller_Notch()
+                nctrl = self.control_fb[i + 1]
                 nctrl.set_param(fs   = fs, 
                                 fh   = nt_fh[i], 
                                 fn   = nt_fn[i], 
                                 gain = nt_g[i])
-                self.control_fb.append(nctrl)
         
         # construct the feedforward controller
-        self.control_ff = []
+        self.num_ff = 0
         if ffncos is not None:
             # get the nco parameters
             nco_f = ffncos['freq_offs']     # NCO frequency offset to carrier, Hz
             nco_A = ffncos['amp_cal']       # NCO calibration amplitude
             nco_P = ffncos['pha_cal']       # NCO calibration phase, deg
-        
+            self.num_ff += len(nco_f)        
+
             # construct the FF controller
             for i in range(len(nco_f)):
-                ffctrl = Controller_FF()
+                ffctrl = self.control_ff[i]
                 ffctrl.set_param(fs   = fs,
                                  fnco = nco_f[i],
                                  A    = nco_A[i],
                                  P    = nco_P[i])
-                self.control_ff.append(ffctrl)
         
         # declare initialized
         self.initialized = True
@@ -146,16 +163,16 @@ class Controller():
         
         # feedback for a step
         vfb = 0.0
-        for ctl in self.control_fb:
-            vfb += ctl.sim_step(vc_err)
+        for i in range(self.num_fb):
+            vfb += self.control_fb[i].sim_step(vc_err)
 
         if not fb_enable:
             vfb = 0.0
         
         # feedforward for a step        
         vff = 0.0
-        for ctl in self.control_ff:
-            vff += ctl.sim_step()
+        for i in range(self.num_ff):
+            vff += self.control_ff[i].sim_step()
         
         if not ff_enable:
             vff = 0.0

@@ -1,8 +1,10 @@
-"""
-Simulate an NCO
-
-Created by Zheqiao Geng on 2024.12.16
-"""
+#####################################################################
+#  Copyright (c) 2024 by Zheqiao Geng
+#  All rights reserved.
+#####################################################################
+#################################################################
+# NCO model
+#################################################################
 import numpy as np
 
 # =================================================
@@ -14,8 +16,8 @@ class NCO():
     # -------------------------------------------
     def __init__(self):
         # init variables
-        self.phase       = 0.0              # instant phase, rad
-        self.initialized = False            # indicate if initialized or not
+        self.cnt = 0                # counter of sim steps
+        self.initialized = False    # indicate if initialized or not
 
     # -------------------------------------------
     # set parameters
@@ -37,7 +39,7 @@ class NCO():
     # reset
     # -------------------------------------------
     def reset(self):
-        self.phase = 0.0
+        self.cnt = 0
 
     # -------------------------------------------
     # simulate a step
@@ -47,11 +49,14 @@ class NCO():
         if not self.initialized:
             return 0.0
 
-        # update the phase
-        self.phase += self.dpha
+        # update the output (2 for both sideband)
+        vo = 2.0 * np.cos(self.cnt * self.dpha)
 
-        # generate output (2 for both sideband)
-        return 2.0 * np.cos(self.phase)
+        # update the counter
+        self.cnt += 1
+
+        # generate output 
+        return vo
 
 
 
