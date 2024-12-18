@@ -54,11 +54,13 @@ class Job_SimBLC(Job):
         self.lpv_setNotchHbw  = [LocalPV(self.modName, self.jobName, "SET-NOTCH-HBW" + str(i+1), "", "Hz", 1, "ao", "notch half bandwidth") \
                                  for i in range(Job_SimBLC.MAX_BH)]
 
-        self.lpv_enaNCOH      = [LocalPV(self.modName, self.jobName, "ENA-NCO-H" + str(i+1),   "", "",    1, "bo", "NCO harmonic") \
+        self.lpv_enaNCOH      = [LocalPV(self.modName, self.jobName, "ENA-NCO-H"   + str(i+1),  "", "",    1, "bo", "NCO harmonic") \
                                  for i in range(Job_SimBLC.MAX_BH)]
-        self.lpv_setNCOA      = [LocalPV(self.modName, self.jobName, "SET-NCO-AMP" + str(i+1), "", "",    1, "ao", "NCO amplitude") \
+        self.lpv_setNCOA      = [LocalPV(self.modName, self.jobName, "SET-NCO-AMP"  + str(i+1), "", "",    1, "ao", "NCO amplitude") \
                                  for i in range(Job_SimBLC.MAX_BH)]
-        self.lpv_setNCOP      = [LocalPV(self.modName, self.jobName, "SET-NCO-PHA" + str(i+1), "", "deg", 1, "ao", "NCO phase") \
+        self.lpv_setNCOPp     = [LocalPV(self.modName, self.jobName, "SET-NCO-PHAP" + str(i+1), "", "deg", 1, "ao", "NCO phase +f") \
+                                 for i in range(Job_SimBLC.MAX_BH)]
+        self.lpv_setNCOPn     = [LocalPV(self.modName, self.jobName, "SET-NCO-PHAN" + str(i+1), "", "deg", 1, "ao", "NCO phase -f") \
                                  for i in range(Job_SimBLC.MAX_BH)]
 
         self.lpv_monVcIF      = LocalPV(self.modName, self.jobName, "MON-VC-IF",  "",   "V", Job_SimBLC.DAQ_SIZE, "waveform", "VC IF")
@@ -142,34 +144,38 @@ class Job_SimBLC(Job):
             notch_hbw = []
             nco_fn    = []
             nco_amp   = []
-            nco_pha   = []
+            nco_phap  = []
+            nco_phan  = []
 
             for i in range(Job_SimBLC.MAX_BH):
-                ft,  _, _, _ = self.lpv_enaNotchH[i].read()
-                g,   _, _, _ = self.lpv_setNotchG[i].read()
-                hbw, _, _, _ = self.lpv_setNotchHbw[i].read()
-                fo,  _, _, _ = self.lpv_enaNCOH[i].read()
-                amp, _, _, _ = self.lpv_setNCOA[i].read()
-                pha, _, _, _ = self.lpv_setNCOP[i].read()
-                
+                ft,   _, _, _ = self.lpv_enaNotchH[i].read()
+                g,    _, _, _ = self.lpv_setNotchG[i].read()
+                hbw,  _, _, _ = self.lpv_setNotchHbw[i].read()
+                fo,   _, _, _ = self.lpv_enaNCOH[i].read()
+                amp,  _, _, _ = self.lpv_setNCOA[i].read()
+                phap, _, _, _ = self.lpv_setNCOPp[i].read()
+                phan, _, _, _ = self.lpv_setNCOPn[i].read()
+
                 notch_fn.append (ft)
                 notch_g.append  (g)
                 notch_hbw.append(hbw)
                 nco_fn.append   (fo)
                 nco_amp.append  (amp)
-                nco_pha.append  (pha)
+                nco_phap.append (phap)
+                nco_phan.append (phan)
 
             # set the parameters for controller
             notch_harmnics = np.where(np.array(notch_fn) == 1)[0] + 1
+            nco_harmonics  = np.where(np.array(nco_fn)   == 1)[0] + 1
             notch_harmnics = np.hstack((notch_harmnics, -notch_harmnics))
-            nco_harmonics  = np.where(np.array(nco_fn) == 1)[0] + 1
+            nco_harmonics  = np.hstack((nco_harmonics,  -nco_harmonics))
 
             notches = {'freq_offs': notch_harmnics * self.fb,
                        'gain':      notch_g * 2,
                        'half_bw':   notch_hbw * 2}
             ffncos  = {'freq_offs': nco_harmonics * self.fb,
-                       'amp_cal':   nco_amp,
-                       'pha_cal':   nco_pha}
+                       'amp_cal':   nco_amp * 2,
+                       'pha_cal':   nco_phap + nco_phan}
 
             self.mutex.acquire()
             self.ctl.set_param(fb      = self.fb,

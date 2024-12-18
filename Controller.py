@@ -37,7 +37,7 @@ class Controller():
             self.control_fb.append(Controller_Notch())      # Notch
 
         self.control_ff = []
-        for i in range(Controller.MAX_NCO):
+        for i in range(Controller.MAX_NCO * 2):
             self.control_ff.append(Controller_FF())         # NCO FF
         
         self.num_fb = 0                 # actual number of feedback controller

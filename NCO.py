@@ -50,7 +50,7 @@ class NCO():
             return 0.0
 
         # update the output (2 for both sideband)
-        vo = 2.0 * np.cos(self.cnt * self.dpha)
+        vo = np.exp(1j * self.cnt * self.dpha)
 
         # update the counter
         self.cnt += 1
