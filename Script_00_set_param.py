@@ -45,6 +45,18 @@ caput(prefix + 'SET-NOTCH-HBW8', 2000)
 caput(prefix + 'SET-NOTCH-HBW9', 2000)
 caput(prefix + 'SET-NOTCH-HBW10', 2000)
 
+step = 20
+caput(prefix + 'SET-NOTCH-LP1', step * 1)
+caput(prefix + 'SET-NOTCH-LP2', step * 2)
+caput(prefix + 'SET-NOTCH-LP3', step * 3)
+caput(prefix + 'SET-NOTCH-LP4', step * 4)
+caput(prefix + 'SET-NOTCH-LP5', step * 5)
+caput(prefix + 'SET-NOTCH-LP6', step * 6)
+caput(prefix + 'SET-NOTCH-LP7', step * 7)
+caput(prefix + 'SET-NOTCH-LP8', step * 8)
+caput(prefix + 'SET-NOTCH-LP9', step * 9)
+caput(prefix + 'SET-NOTCH-LP10', step * 10)
+
 caput(prefix + 'ENA-NCO-H1', 0)
 caput(prefix + 'ENA-NCO-H2', 0)
 caput(prefix + 'ENA-NCO-H3', 0)

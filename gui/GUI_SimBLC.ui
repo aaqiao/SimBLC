@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1005</width>
-    <height>633</height>
+    <height>664</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <x>8</x>
      <y>380</y>
      <width>731</width>
-     <height>241</height>
+     <height>271</height>
     </rect>
    </property>
    <property name="title">
@@ -1101,7 +1101,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>190</y>
+      <y>220</y>
       <width>181</width>
       <height>20</height>
      </rect>
@@ -1123,7 +1123,7 @@
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>190</y>
+      <y>220</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1166,7 +1166,7 @@
     <property name="geometry">
      <rect>
       <x>590</x>
-      <y>170</y>
+      <y>200</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1209,7 +1209,7 @@
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>170</y>
+      <y>200</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1252,7 +1252,7 @@
     <property name="geometry">
      <rect>
       <x>540</x>
-      <y>170</y>
+      <y>200</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1295,7 +1295,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>190</y>
+      <y>220</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1338,7 +1338,7 @@
     <property name="geometry">
      <rect>
       <x>440</x>
-      <y>190</y>
+      <y>220</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1381,7 +1381,7 @@
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>170</y>
+      <y>200</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1424,7 +1424,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>150</y>
+      <y>180</y>
       <width>151</width>
       <height>20</height>
      </rect>
@@ -1446,7 +1446,7 @@
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>170</y>
+      <y>200</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1489,7 +1489,7 @@
     <property name="geometry">
      <rect>
       <x>440</x>
-      <y>170</y>
+      <y>200</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1532,7 +1532,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>170</y>
+      <y>200</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1575,7 +1575,7 @@
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>190</y>
+      <y>220</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1618,7 +1618,7 @@
     <property name="geometry">
      <rect>
       <x>590</x>
-      <y>190</y>
+      <y>220</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1661,7 +1661,7 @@
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>190</y>
+      <y>220</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1704,7 +1704,7 @@
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>170</y>
+      <y>200</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1747,7 +1747,7 @@
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>170</y>
+      <y>200</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1790,7 +1790,7 @@
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>170</y>
+      <y>200</y>
       <width>121</width>
       <height>20</height>
      </rect>
@@ -1812,7 +1812,7 @@
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>190</y>
+      <y>220</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1855,7 +1855,7 @@
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>190</y>
+      <y>220</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1898,7 +1898,7 @@
     <property name="geometry">
      <rect>
       <x>640</x>
-      <y>190</y>
+      <y>220</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1941,7 +1941,7 @@
     <property name="geometry">
      <rect>
       <x>640</x>
-      <y>170</y>
+      <y>200</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -1984,7 +1984,7 @@
     <property name="geometry">
      <rect>
       <x>540</x>
-      <y>190</y>
+      <y>220</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -2301,7 +2301,7 @@
     <property name="geometry">
      <rect>
       <x>550</x>
-      <y>150</y>
+      <y>180</y>
       <width>35</width>
       <height>17</height>
      </rect>
@@ -2317,7 +2317,7 @@
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>150</y>
+      <y>180</y>
       <width>35</width>
       <height>17</height>
      </rect>
@@ -2333,7 +2333,7 @@
     <property name="geometry">
      <rect>
       <x>650</x>
-      <y>150</y>
+      <y>180</y>
       <width>42</width>
       <height>17</height>
      </rect>
@@ -2349,7 +2349,7 @@
     <property name="geometry">
      <rect>
       <x>450</x>
-      <y>150</y>
+      <y>180</y>
       <width>35</width>
       <height>17</height>
      </rect>
@@ -2365,7 +2365,7 @@
     <property name="geometry">
      <rect>
       <x>500</x>
-      <y>150</y>
+      <y>180</y>
       <width>35</width>
       <height>17</height>
      </rect>
@@ -2381,7 +2381,7 @@
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>150</y>
+      <y>180</y>
       <width>35</width>
       <height>17</height>
      </rect>
@@ -2397,7 +2397,7 @@
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>150</y>
+      <y>180</y>
       <width>35</width>
       <height>17</height>
      </rect>
@@ -2413,7 +2413,7 @@
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>150</y>
+      <y>180</y>
       <width>35</width>
       <height>17</height>
      </rect>
@@ -2429,7 +2429,7 @@
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>150</y>
+      <y>180</y>
       <width>35</width>
       <height>17</height>
      </rect>
@@ -2445,7 +2445,7 @@
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>150</y>
+      <y>180</y>
       <width>35</width>
       <height>17</height>
      </rect>
@@ -2461,7 +2461,7 @@
     <property name="geometry">
      <rect>
       <x>440</x>
-      <y>210</y>
+      <y>240</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -2504,7 +2504,7 @@
     <property name="geometry">
      <rect>
       <x>290</x>
-      <y>210</y>
+      <y>240</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -2547,7 +2547,7 @@
     <property name="geometry">
      <rect>
       <x>540</x>
-      <y>210</y>
+      <y>240</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -2590,7 +2590,7 @@
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>210</y>
+      <y>240</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -2633,7 +2633,7 @@
     <property name="geometry">
      <rect>
       <x>640</x>
-      <y>210</y>
+      <y>240</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -2676,7 +2676,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>210</y>
+      <y>240</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -2719,7 +2719,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>210</y>
+      <y>240</y>
       <width>181</width>
       <height>20</height>
      </rect>
@@ -2741,7 +2741,7 @@
     <property name="geometry">
      <rect>
       <x>590</x>
-      <y>210</y>
+      <y>240</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -2784,7 +2784,7 @@
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>210</y>
+      <y>240</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -2827,7 +2827,7 @@
     <property name="geometry">
      <rect>
       <x>340</x>
-      <y>210</y>
+      <y>240</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -2870,7 +2870,7 @@
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>210</y>
+      <y>240</y>
       <width>51</width>
       <height>20</height>
      </rect>
@@ -2885,6 +2885,458 @@
     </property>
     <property name="channel" stdset="0">
      <string notr="true">$(MODULE_NAME)-JOBSIM:SET-NCO-PHAN5</string>
+    </property>
+    <property name="background">
+     <color>
+      <red>229</red>
+      <green>229</green>
+      <blue>229</blue>
+     </color>
+    </property>
+    <property name="colorMode">
+     <enum>caLineEdit::Static</enum>
+    </property>
+    <property name="precision">
+     <number>1</number>
+    </property>
+    <property name="precisionMode">
+     <enum>caLineEdit::User</enum>
+    </property>
+    <property name="fontScaleMode" stdset="0">
+     <enum>caLineEdit::None</enum>
+    </property>
+    <property name="formatType">
+     <enum>caLineEdit::decimal</enum>
+    </property>
+   </widget>
+   <widget class="caTextEntry" name="catextentry_181">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>140</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">$(MODULE_NAME)-JOBSIM:SET-NOTCH-LP8</string>
+    </property>
+    <property name="background">
+     <color>
+      <red>229</red>
+      <green>229</green>
+      <blue>229</blue>
+     </color>
+    </property>
+    <property name="colorMode">
+     <enum>caLineEdit::Static</enum>
+    </property>
+    <property name="precision">
+     <number>1</number>
+    </property>
+    <property name="precisionMode">
+     <enum>caLineEdit::User</enum>
+    </property>
+    <property name="fontScaleMode" stdset="0">
+     <enum>caLineEdit::None</enum>
+    </property>
+    <property name="formatType">
+     <enum>caLineEdit::decimal</enum>
+    </property>
+   </widget>
+   <widget class="caTextEntry" name="catextentry_179">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>140</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">$(MODULE_NAME)-JOBSIM:SET-NOTCH-LP9</string>
+    </property>
+    <property name="background">
+     <color>
+      <red>229</red>
+      <green>229</green>
+      <blue>229</blue>
+     </color>
+    </property>
+    <property name="colorMode">
+     <enum>caLineEdit::Static</enum>
+    </property>
+    <property name="precision">
+     <number>1</number>
+    </property>
+    <property name="precisionMode">
+     <enum>caLineEdit::User</enum>
+    </property>
+    <property name="fontScaleMode" stdset="0">
+     <enum>caLineEdit::None</enum>
+    </property>
+    <property name="formatType">
+     <enum>caLineEdit::decimal</enum>
+    </property>
+   </widget>
+   <widget class="caTextEntry" name="catextentry_163">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>140</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">$(MODULE_NAME)-JOBSIM:SET-NOTCH-LP1</string>
+    </property>
+    <property name="background">
+     <color>
+      <red>229</red>
+      <green>229</green>
+      <blue>229</blue>
+     </color>
+    </property>
+    <property name="colorMode">
+     <enum>caLineEdit::Static</enum>
+    </property>
+    <property name="precision">
+     <number>1</number>
+    </property>
+    <property name="precisionMode">
+     <enum>caLineEdit::User</enum>
+    </property>
+    <property name="fontScaleMode" stdset="0">
+     <enum>caLineEdit::None</enum>
+    </property>
+    <property name="formatType">
+     <enum>caLineEdit::decimal</enum>
+    </property>
+   </widget>
+   <widget class="caTextEntry" name="catextentry_164">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>140</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">$(MODULE_NAME)-JOBSIM:SET-NOTCH-LP6</string>
+    </property>
+    <property name="background">
+     <color>
+      <red>229</red>
+      <green>229</green>
+      <blue>229</blue>
+     </color>
+    </property>
+    <property name="colorMode">
+     <enum>caLineEdit::Static</enum>
+    </property>
+    <property name="precision">
+     <number>1</number>
+    </property>
+    <property name="precisionMode">
+     <enum>caLineEdit::User</enum>
+    </property>
+    <property name="fontScaleMode" stdset="0">
+     <enum>caLineEdit::None</enum>
+    </property>
+    <property name="formatType">
+     <enum>caLineEdit::decimal</enum>
+    </property>
+   </widget>
+   <widget class="caTextEntry" name="catextentry_175">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>140</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">$(MODULE_NAME)-JOBSIM:SET-NOTCH-LP2</string>
+    </property>
+    <property name="background">
+     <color>
+      <red>229</red>
+      <green>229</green>
+      <blue>229</blue>
+     </color>
+    </property>
+    <property name="colorMode">
+     <enum>caLineEdit::Static</enum>
+    </property>
+    <property name="precision">
+     <number>1</number>
+    </property>
+    <property name="precisionMode">
+     <enum>caLineEdit::User</enum>
+    </property>
+    <property name="fontScaleMode" stdset="0">
+     <enum>caLineEdit::None</enum>
+    </property>
+    <property name="formatType">
+     <enum>caLineEdit::decimal</enum>
+    </property>
+   </widget>
+   <widget class="caTextEntry" name="catextentry_176">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>140</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">$(MODULE_NAME)-JOBSIM:SET-NOTCH-LP3</string>
+    </property>
+    <property name="background">
+     <color>
+      <red>229</red>
+      <green>229</green>
+      <blue>229</blue>
+     </color>
+    </property>
+    <property name="colorMode">
+     <enum>caLineEdit::Static</enum>
+    </property>
+    <property name="precision">
+     <number>1</number>
+    </property>
+    <property name="precisionMode">
+     <enum>caLineEdit::User</enum>
+    </property>
+    <property name="fontScaleMode" stdset="0">
+     <enum>caLineEdit::None</enum>
+    </property>
+    <property name="formatType">
+     <enum>caLineEdit::decimal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_261">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>140</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Notch Loop Phase (deg):</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="caTextEntry" name="catextentry_177">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>140</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">$(MODULE_NAME)-JOBSIM:SET-NOTCH-LP10</string>
+    </property>
+    <property name="background">
+     <color>
+      <red>229</red>
+      <green>229</green>
+      <blue>229</blue>
+     </color>
+    </property>
+    <property name="colorMode">
+     <enum>caLineEdit::Static</enum>
+    </property>
+    <property name="precision">
+     <number>1</number>
+    </property>
+    <property name="precisionMode">
+     <enum>caLineEdit::User</enum>
+    </property>
+    <property name="fontScaleMode" stdset="0">
+     <enum>caLineEdit::None</enum>
+    </property>
+    <property name="formatType">
+     <enum>caLineEdit::decimal</enum>
+    </property>
+   </widget>
+   <widget class="caTextEntry" name="catextentry_178">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>140</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">$(MODULE_NAME)-JOBSIM:SET-NOTCH-LP4</string>
+    </property>
+    <property name="background">
+     <color>
+      <red>229</red>
+      <green>229</green>
+      <blue>229</blue>
+     </color>
+    </property>
+    <property name="colorMode">
+     <enum>caLineEdit::Static</enum>
+    </property>
+    <property name="precision">
+     <number>1</number>
+    </property>
+    <property name="precisionMode">
+     <enum>caLineEdit::User</enum>
+    </property>
+    <property name="fontScaleMode" stdset="0">
+     <enum>caLineEdit::None</enum>
+    </property>
+    <property name="formatType">
+     <enum>caLineEdit::decimal</enum>
+    </property>
+   </widget>
+   <widget class="caTextEntry" name="catextentry_180">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>140</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">$(MODULE_NAME)-JOBSIM:SET-NOTCH-LP7</string>
+    </property>
+    <property name="background">
+     <color>
+      <red>229</red>
+      <green>229</green>
+      <blue>229</blue>
+     </color>
+    </property>
+    <property name="colorMode">
+     <enum>caLineEdit::Static</enum>
+    </property>
+    <property name="precision">
+     <number>1</number>
+    </property>
+    <property name="precisionMode">
+     <enum>caLineEdit::User</enum>
+    </property>
+    <property name="fontScaleMode" stdset="0">
+     <enum>caLineEdit::None</enum>
+    </property>
+    <property name="formatType">
+     <enum>caLineEdit::decimal</enum>
+    </property>
+   </widget>
+   <widget class="caTextEntry" name="catextentry_144">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>140</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="channel" stdset="0">
+     <string notr="true">$(MODULE_NAME)-JOBSIM:SET-NOTCH-LP5</string>
     </property>
     <property name="background">
      <color>
