@@ -16,7 +16,7 @@ class Controller_Notch():
     # -------------------------------------------
     def __init__(self):
         # init variables
-        self.vo_last     = 0.0      # temp var for solving diff equ                
+        self.vo_last     = 0.0      # temp var for solving diff equ
         self.initialized = False    # indicate if initialized or not
 
     # -------------------------------------------
