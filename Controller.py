@@ -86,7 +86,7 @@ class Controller():
         self.Ts = 1.0 / fs                  # sampling time, s
 
         # set the feedback controller
-        self.control_fb[0].set_param(Kp = Kp, Ki = Ki)
+        self.control_fb[0].set_param(fs = fs, Kp = Kp, Ki = Ki)
         self.num_fb = 1
         if notches is not None:
             # get the notch parameters
