@@ -1,8 +1,7 @@
 #!/bin/bash
 #####################################################################
-#  Copyright (c) 2023 by Paul Scherrer Institute, Switzerland
+#  Copyright (c) 2024 Zheqiao Geng
 #  All rights reserved.
-#  Authors: Zheqiao Geng
 #####################################################################
 ModuleName=SGE-BLC
 
