@@ -1,3 +1,7 @@
+#####################################################################
+#  Copyright (c) 2024 by Zheqiao Geng
+#  All rights reserved.
+#####################################################################
 # Python script to setup the parameters
 import time
 import numpy as np
